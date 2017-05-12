@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+
+        <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                >
+
+                <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="left"
+                        >
+
+                        <TextView
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:text="Login"
+                                android:layout_row="0"
+                                android:layout_column="0"
+                                android:width="0px"
+                                android:layout_weight=".33"
+                                android:layout_span="0"
+                                />
+
+                        <EditText
+                                android:layout_height="wrap_content"
+                                android:inputType="text"
+                                android:ems="10"
+                                android:id="@+id/username"
+                                android:layout_row="0"
+                                android:layout_column="1"
+                                android:hint="username"
+                                android:layout_span="1"
+                                android:text="jerry509@live.com"/>
+
+                        <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Login"
+                                android:id="@+id/loginButton"
+                                android:layout_column="2"
+                                android:onClick="loginToServer"
+                                />
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        >
+
+                        <TextView
+                                android:layout_width="10dp"
+                                android:layout_height="wrap_content"
+                                android:text="Password"
+                                android:layout_row="1"
+                                android:layout_column="0"
+                                android:id="@+id/textView"
+                                android:layout_span="0"
+                                android:layout_weight=".33"
+                                android:width="0px"
+                                />
+
+                        <EditText
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"
+                                android:ems="10"
+                                android:id="@+id/password"
+                                android:layout_column="1"
+                                android:hint="password"
+                                android:layout_span="1"
+                                android:text="rocknroll0"/>
+
+                        <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:id="@+id/avatar"
+                                android:layout_column="2"
+                                android:layout_gravity="center_horizontal"
+                                />
+
+                </TableRow>
+
+                <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        >
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="Available Users"
+                                android:id="@+id/availableLabel"
+                                android:layout_row="4"
+                                android:layout_column="0"
+                                android:layout_gravity="center_horizontal"
+                                android:visibility="invisible"
+                                android:layout_weight=".5"
+                                />
+
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Get Users"
+                                android:id="@+id/showUsersBtn"
+                                android:layout_column="1"
+                                android:onClick="getUsersOnClick"
+                                android:enabled="true"
+                                android:visibility="invisible"
+                                android:layout_weight=".5"
+                                />
+                        <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Challege Computer"
+                                android:id="@+id/btnChallenge" android:enabled="true" android:visibility="invisible"
+                                android:onClick="getComputerOnClick"/>
+
+                </TableRow>
+        </TableLayout>
+
+
+        <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible"
+                />
+
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView"
+                android:layout_gravity="center_horizontal"
+                />
+</LinearLayout>
